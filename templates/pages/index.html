@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Book Haven - Rent, Shop, Contact, and Login for your favorite books.">
+    <meta name="keywords" content="books, rent, shop, contact, login, bookstore">
+    <title>Home | Book Haven</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #0074D9;
+            color: white;
+            padding: 1em 2em;
+        }
+
+        .logo h1 {
+            font-size: 1.8em;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin-left: 2em;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .slogan {
+            text-align: center;
+            padding: 2em 0;
+            background-color: #0074D9;
+            color: white;
+        }
+
+        .categories {
+            padding: 2em 0;
+            text-align: center;
+        }
+
+        .category-grid {
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+            flex-wrap: wrap;
+        }
+
+        .category-card {
+            background-color: #fff;
+            padding: 1em;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 150px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .category-card:hover {
+            background-color: #f0f0f0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #0074D9;
+            color: white;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>Book Haven</h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><span><a href="{% url 'home' %}" >HOME</a></span></li>
+            <li><span><a href="{% url 'rent' %}" >RENT</a></span></li>
+            <li><span><a href="{% url 'shop' %}" >SHOP</a></span></li>
+            <li><span><a href="{% url 'sell' %}" >SELL</a></span></li>
+            <li><span><a href="{% url 'login' %}" >LOGIN</a></span></li>
+            
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Slogan Section -->
+    <section class="slogan">
+        <h2>Welcome to Book Haven!</h2>
+        <p>Your go-to place for renting, buying, and managing books online.</p>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <h2>Explore Our Services</h2>
+        <div class="category-grid">
+            <div class="category-card">
+                <h3>Rent</h3>
+                <p>Rent your favorite books easily.</p>
+            </div>
+            <div class="category-card">
+                <h3>Shop</h3>
+                <p>Browse and buy books from our collection.</p>
+            </div>
+            <div class="category-card">
+                <h3>Contact</h3>
+                <p>Get in touch with us for support.</p>
+            </div>
+            <div class="category-card">
+                <h3>Login</h3>
+                <p>Access your account to manage books and orders.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Book Haven. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Help</a>
+        </div>
+    </footer>
+</body>
+</html>

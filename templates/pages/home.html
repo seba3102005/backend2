@@ -1,0 +1,77 @@
+{% extends "base.html"%}
+
+{% block content %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Buy, sell, and rent books online">
+    <meta name="keywords" content="books, buy, sell, rent, online bookstore">
+    <title>Book Haven - Buy, Sell, and Rent Books Online</title>
+    
+</head>
+<body>
+
+    
+
+    <!-- Hero Section -->
+    <section class="hero">
+        {% load static %}
+        <div class="hero-content">
+            <h2>Discover, Rent & Buy Your Favorite Books</h2>
+            <p>Find a wide collection of new and used books for every interest.</p>
+            <button class="cta-btn"><span><a href="{% url 'lists' %}">Browse Now</a></span></button>
+        </div>
+    </section>
+
+    <!-- Featured Books Section -->
+    <section class="featured-books">
+        <h2>Featured Books</h2>
+        <div class="book-grid">
+            <div class="book-card">
+                <img src="{% static 'images/book1.jpg'%}" alt="Book 1">
+                <h3>The Great Gatsby</h3>
+                <p>$15.99</p>
+            </div>
+            <div class="book-card">
+                <img src="{% static 'images/book2.jpeg'%}" alt="Book 2">
+                <h3>1984</h3>
+                <p>$12.99</p>
+            </div>
+            <div class="book-card">
+                <img src="{% static 'images/book3.jpeg'%}" alt="Book 3">
+                <h3>To Kill a Mockingbird</h3>
+                <p>$14.99</p>
+            </div>
+            <div class="book-card">
+                <img src="{% static 'images/book4.jpg'%}" alt="Book 4">
+                <h3>The Catcher in the Rye</h3>
+                <p>$13.99</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <h2>Categories</h2>
+        <div class="category-grid">
+            <div class="category-card"><a href="{% url 'fiction' %}" >Fiction</a></div>
+            <div class="category-card"><a href="{% url 'nonfiction' %}" >Non-fiction</a></div>
+            <div class="category-card"><a href="{% url 'science' %}" >Science</a></div>
+            <div class="category-card"><a href="{% url 'romance' %}" >Romance</a></div>
+            <div class="category-card"><a href="{% url 'children' %}" >Children's</a></div>
+            <div class="category-card"><a href="{% url 'mystery' %}" >Mystery</a></div>
+        </div>
+    </section>
+
+
+</body>
+</html>
+
+
+
+
+{% endblock content %}

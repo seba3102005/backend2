@@ -1,0 +1,45 @@
+<!-- Header Section -->
+<header>
+    <div class="logo">
+        <h1>Book Haven</h1>
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><span><a href="{% url 'home' %}" >HOME</a></span></li>
+            <li><span><a href="{% url 'rent' %}" >RENT</a></span></li>
+            <li><span><a href="{% url 'shop' %}" >SHOP</a></span></li>
+            <li><span><a href="{% url 'sell' %}" >SELL</a></span></li>
+            <li><span><a href="{% url 'login' %}" >LOGIN</a></span></li>
+            
+        </ul>
+    </nav>
+    <style>
+        header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0074D9;
+    color: white;
+    padding: 1em 2em;
+}
+
+.logo h1 {
+    font-size: 1.8em;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 2em;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+    </style>
+</header>
